@@ -72,5 +72,11 @@ if __name__ == '__main__':
 # ---------------------------------------------------------
 # PROBLEM 5: Split & Join
 # ---------------------------------------------------------
+def split_and_join(line):
+    line2 = line.split(" ")
+    return "-".join(line2)
+    
 
+str = input()
+print(split_and_join(str))
 
