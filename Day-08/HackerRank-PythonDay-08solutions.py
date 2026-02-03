@@ -46,3 +46,55 @@ for _ in range(N):
 
 print(*d)
 
+# ---------------------------------------------------------
+# PROBLEM 3: Set .intersection() Operation
+# ---------------------------------------------------------
+
+eng_subs = int(input())
+
+eng_set = set(map(int, input().split()))
+
+print(eng_set)
+print(type(eng_set))
+
+fr_subs = int(input())
+
+fr_set = set(map(int,input().split()))
+
+print(fr_set)
+print(type(fr_set))
+
+print(len(eng_set.intersection(fr_set)))
+
+# ---------------------------------------------------------
+# PROBLEM 4: Set .union() Operation
+# ---------------------------------------------------------
+eng_subs = int(input())
+
+eng_set = set(map(int,input().split()))
+
+fr_subs = int(input())
+
+fr_set = set(map(int,input().split()))
+
+print(len(eng_set.union(fr_set)))
+
+# ---------------------------------------------------------
+# PROBLEM 5: Mod Divmod
+# ---------------------------------------------------------
+def div_operations(a, b):
+    return a // b, a % b, divmod(a, b)
+
+def main():
+    a = int(input())
+    b = int(input())
+
+    quotient, remainder, div_result = div_operations(a, b)
+
+    print(quotient)
+    print(remainder)
+    print(div_result)
+
+
+main()
+
