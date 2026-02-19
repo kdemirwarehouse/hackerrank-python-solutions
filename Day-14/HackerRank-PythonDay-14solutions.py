@@ -1,6 +1,7 @@
 """
-HackerRank Python Solutions - Day 8
-Date: 2026-02-014
+HackerRank Python Solutions - Day 14
+Author: Kadir Demir
+Date: 2026-02-19
 """
 
 # ---------------------------------------------------------
@@ -108,6 +109,34 @@ if __name__ == '__main__':
     tree = etree.ElementTree(etree.fromstring(xml))
     root = tree.getroot()
     print(get_attr_number(root))
+
+# ---------------------------------------------------------
+# PROBLEM 5: Validating UID
+# ---------------------------------------------------------
+import re
+
+for _ in range(int(input())):
+    S = input()
+    # t = re.search(r"^[a-zA-Z0-9]{10}$",S)
+    # t = re.search(r"[A-Z][0-9a-z]*[A-Z]",S)
+    # t = re.search(r"\d[A-Za-z]*\d[A-Za-z]*\d",S)
+    # t = re.search(r"([A-Za-z0-9])[A-Za-z0-9]*(?=\1)",S)
+
+    if (re.search(r"^[a-zA-Z0-9]{10}$", S)):
+        if (re.search(r"[A-Z][0-9a-z]*[A-Z]", S)):
+            if (re.search(r"\d[A-Za-z]*\d[A-Za-z]*\d", S)):
+                if (re.search(r"([A-Za-z0-9])[A-Za-z0-9]*(?=\1)", S)):
+                    print("Invalid")
+
+                else:
+                    print("Valid")
+            else:
+                print("Invalid")
+        else:
+            print("Invalid")
+    else:
+        print("Invalid")
+
 
 
 
