@@ -31,4 +31,26 @@ for i in range(n):
 tree = etree.ElementTree(etree.fromstring(xml))
 depth(tree.getroot(), -1)
 
-print(maxdepth
+print(maxdepth)
+
+# ---------------------------------------------------------
+# PROBLEM 2: Standardize Mobile Number Using Decorators
+# ---------------------------------------------------------
+def wrapper(f):
+    def fun(l):
+        new_list = []
+        for num in l:
+            num = num[-10:]
+            num = "+91 " + num[:5] + " " + num[5:]
+            new_list.append(num)
+        return f(new_list)
+    return fun
+
+@wrapper
+def sort_phone(l):
+    print(*sorted(l), sep='\n')
+
+if __name__ == '__main__':
+    l = [input() for _ in range(int(input()))]
+
+
