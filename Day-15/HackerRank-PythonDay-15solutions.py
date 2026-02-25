@@ -99,3 +99,18 @@ def arrays(arr):
 arr = input().strip().split(' ')
 result = arrays(arr)
 print(result)
+
+# ---------------------------------------------------------
+# PROBLEM 5: Numpy Shape and Reshape
+# ---------------------------------------------------------
+
+import numpy
+
+my_num_list = input().split()
+
+my_num_list = list(map(int, my_num_list))
+
+my_array = numpy.array(my_num_list)
+
+print (numpy.reshape(my_array, (3,3)))
+
