@@ -43,3 +43,18 @@ arr1 = np.array(list1)
 arr2 = np.array(list2)
 
 print(np.concatenate((arr1, arr2), axis=0))
+
+# ---------------------------------------------------------
+# PROBLEM 3: Zeros and Ones
+# ---------------------------------------------------------
+import numpy as np
+
+a = list(map(int,input().split()))
+
+b = np.zeros(((a)), dtype=int)
+
+print(b)
+
+c = np.ones(((a)),dtype=int)
+
+print(c)
