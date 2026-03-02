@@ -58,3 +58,13 @@ print(b)
 c = np.ones(((a)),dtype=int)
 
 print(c)
+
+# ---------------------------------------------------------
+# PROBLEM 4: Eye and Identity
+# ---------------------------------------------------------
+import numpy as np
+np.set_printoptions(legacy='1.13')
+
+N, M = map(int, input().split())
+
+print(np.eye(N, M))
