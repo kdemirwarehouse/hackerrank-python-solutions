@@ -68,3 +68,26 @@ np.set_printoptions(legacy='1.13')
 N, M = map(int, input().split())
 
 print(np.eye(N, M))
+
+# ---------------------------------------------------------
+# PROBLEM 5: Array Mathematics
+# ---------------------------------------------------------
+import numpy as np 
+
+N, M = map(int, input().split())
+
+A = np.array([input().split() for _ in range(N)], int)
+
+B = np.array([input().split() for _ in range(N)], int)
+
+print(A + B)
+
+print(A - B)
+
+print(A * B)
+
+print(A // B)
+
+print(A % B)
+
+print(A ** B)
