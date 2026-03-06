@@ -31,3 +31,21 @@ my_array = np.array(my_list)
 a = np.sum(my_array, axis = 0)
 
 print(np.prod(a, axis=None))
+
+# ---------------------------------------------------------
+# PROBLEM 3: Min and Max
+# ---------------------------------------------------------
+import numpy as np 
+
+N, M = map(int, input().split())
+
+my_list = []
+
+[my_list.append(list(map(int, input().split()))) for _ in range(N)]
+
+my_array = np.array(my_list)
+
+min_value = np.min(my_array, axis = 1)
+
+print (np.max(min_value))
+
