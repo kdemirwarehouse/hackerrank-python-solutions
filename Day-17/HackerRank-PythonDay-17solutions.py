@@ -49,3 +49,24 @@ min_value = np.min(my_array, axis = 1)
 
 print (np.max(min_value))
 
+# ---------------------------------------------------------
+# PROBLEM 3: Mean, Var and Std
+# ---------------------------------------------------------
+import numpy as np
+
+N, M = map(int, input().split())
+
+my_list = []
+
+for _ in range(N):
+    my_list.append(list(map(int, input().split())))
+
+my_array = np.array(my_list)
+
+print(np.mean(my_array, axis=1))
+print(np.var(my_array, axis=0))
+print(round(np.std(my_array, axis=None), 11))
+
+
+
+
