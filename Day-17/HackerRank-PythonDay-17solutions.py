@@ -68,5 +68,15 @@ print(np.var(my_array, axis=0))
 print(round(np.std(my_array, axis=None), 11))
 
 
+# ---------------------------------------------------------
+# PROBLEM 4: Dot and Cross
+# ---------------------------------------------------------
+import numpy as np 
 
+N = int(input())
+
+A = np.array([list(map(int, input().split())) for _ in range(N)])
+B = np.array([list(map(int, input().split())) for _ in range(N)])
+
+print(np.dot(A, B))
 
