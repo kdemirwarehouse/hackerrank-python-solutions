@@ -80,3 +80,19 @@ B = np.array([list(map(int, input().split())) for _ in range(N)])
 
 print(np.dot(A, B))
 
+# ---------------------------------------------------------
+# PROBLEM 5: Inner and Outer
+# ---------------------------------------------------------
+import numpy as np
+
+a_list = input().split()
+
+b_list = input().split()
+
+A = np.array(list(map(int,a_list)))
+
+B = np.array(list(map(int, b_list)))
+
+print(np.inner(A,B))
+print(np.outer(A,B))
+
