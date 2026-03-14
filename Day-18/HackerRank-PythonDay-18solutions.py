@@ -33,6 +33,25 @@ A = np.array(my_list)
 
 print(np.linalg.det(A))
 
+# ---------------------------------------------------------
+# PROBLEM 3: Write a function
+# ---------------------------------------------------------
+def is_leap(year):
+    if year % 4 == 0 and year % 100 != 0:
+        leap = True
+
+    elif year % 400 == 0:
+        leap = True
+
+    else:
+        leap = False
+
+    return leap
+
+
+year = int(input())
+print(is_leap(year))
+
 
 
 
