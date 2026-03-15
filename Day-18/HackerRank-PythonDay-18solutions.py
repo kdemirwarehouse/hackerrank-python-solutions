@@ -52,6 +52,40 @@ def is_leap(year):
 year = int(input())
 print(is_leap(year))
 
+# ---------------------------------------------------------
+# PROBLEM 4: The Minion Game
+# ---------------------------------------------------------
+def minion_game(string):
+    n = len(string)
+    string = string.upper()
+
+    kevin_score = 0
+    stuart_score = 0
+
+    vowel_sound = ["A", "E", "I", "O", "U"]
+
+    for index, letter in enumerate(string):
+        if letter in vowel_sound:
+            kevin_score += n - index
+        else:
+            stuart_score += n-index
+
+    if kevin_score > stuart_score:
+        print("Kevin", kevin_score)
+    elif stuart_score > kevin_score:
+        print("Stuart", stuart_score)
+    else:
+        print("Draw")
+
+def main():
+    s = input()
+    minion_game(s)
+
+
+main()
+
+
+
 
 
 
