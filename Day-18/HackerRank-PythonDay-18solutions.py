@@ -84,6 +84,24 @@ def main():
 
 main()
 
+# ---------------------------------------------------------
+# PROBLEM 5: Merge the Tools!
+# ---------------------------------------------------------
+def merge_the_tools(string, k):
+    for i in range(0, len(string), k):
+        t_i = string[i:i+k]
+
+        u_i = ""
+        for char in t_i:
+            if char not in u_i:
+                u_i += char
+        print(u_i)
+
+def main():
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
+
+main()
 
 
 
