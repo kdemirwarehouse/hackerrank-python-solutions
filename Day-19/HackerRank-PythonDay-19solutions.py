@@ -34,3 +34,21 @@ if __name__ == '__main__':
 
     fptr.close()
 
+# ---------------------------------------------------------
+# PROBLEM 2: Find Angle MBC
+# ---------------------------------------------------------
+import math
+
+AB = int(input())
+
+BC = int(input())
+
+angle = math.atan(AB/BC)
+
+angle = math.degrees(angle)
+
+alfa = round(angle)
+
+print(str(alfa) + "\u00b0")
+
+
