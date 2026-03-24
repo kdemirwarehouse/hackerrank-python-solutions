@@ -51,4 +51,24 @@ alfa = round(angle)
 
 print(str(alfa) + "\u00b0")
 
+# ---------------------------------------------------------
+# PROBLEM 3: No idea!
+# ---------------------------------------------------------
+n, m = tuple(map(int,input().split(" ")))
+
+n_arr = list(map(int, input().split(" ")))
+
+m_a_arr = set(map(int, input().split(" ")))
+
+m_b_arr = set(map(int, input().split(" ")))
+
+happyness = 0
+
+for i in n_arr:
+    if i in m_a_arr:
+        happyness += 1
+    elif i in m_b_arr:
+        happyness -= 1
+
+print(happyness)
 
