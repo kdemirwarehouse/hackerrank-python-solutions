@@ -72,3 +72,17 @@ for i in n_arr:
 
 print(happyness)
 
+# ---------------------------------------------------------
+# PROBLEM 4: Word Order
+# ---------------------------------------------------------
+n = int(input()) 
+result_words = dict() 
+for _ in range(n): 
+    word = input() 
+    result_words[word] = result_words.get(word, 0)+1 
+
+print(len(result_words))
+print(*result_words.values())
+
+
+
