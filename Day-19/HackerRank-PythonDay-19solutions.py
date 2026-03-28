@@ -84,5 +84,15 @@ for _ in range(n):
 print(len(result_words))
 print(*result_words.values())
 
+# ---------------------------------------------------------
+# PROBLEM 5: Compress the String!
+# ---------------------------------------------------------
+from itertools import groupby
+s = input()
+for key,group in groupby(s):
+    x = list(group).count(key),int(key)
+    print(tuple(x), end=" ")
+    
+    
 
 
