@@ -34,3 +34,65 @@ if __name__ == '__main__':
 
     fptr.close()
 
+# ---------------------------------------------------------
+# PROBLEM 2: Find Angle MBC
+# ---------------------------------------------------------
+import math
+
+AB = int(input())
+
+BC = int(input())
+
+angle = math.atan(AB/BC)
+
+angle = math.degrees(angle)
+
+alfa = round(angle)
+
+print(str(alfa) + "\u00b0")
+
+# ---------------------------------------------------------
+# PROBLEM 3: No idea!
+# ---------------------------------------------------------
+n, m = tuple(map(int,input().split(" ")))
+
+n_arr = list(map(int, input().split(" ")))
+
+m_a_arr = set(map(int, input().split(" ")))
+
+m_b_arr = set(map(int, input().split(" ")))
+
+happyness = 0
+
+for i in n_arr:
+    if i in m_a_arr:
+        happyness += 1
+    elif i in m_b_arr:
+        happyness -= 1
+
+print(happyness)
+
+# ---------------------------------------------------------
+# PROBLEM 4: Word Order
+# ---------------------------------------------------------
+n = int(input()) 
+result_words = dict() 
+for _ in range(n): 
+    word = input() 
+    result_words[word] = result_words.get(word, 0)+1 
+
+print(len(result_words))
+print(*result_words.values())
+
+# ---------------------------------------------------------
+# PROBLEM 5: Compress the String!
+# ---------------------------------------------------------
+from itertools import groupby
+s = input()
+for key,group in groupby(s):
+    x = list(group).count(key),int(key)
+    print(tuple(x), end=" ")
+    
+    
+
+
