@@ -20,3 +20,33 @@ if __name__ == '__main__':
     s = input()
     company_logo(s)
 
+# ---------------------------------------------------------
+# PROBLEM 2: Piling Up!
+# ---------------------------------------------------------
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    blocks = list(map(int, input().split()))
+
+    left = 0
+    right = n - 1
+    last = float('inf')  
+
+    possible = True
+
+    while left <= right:
+        if blocks[left] >= blocks[right]:
+            pick = blocks[left]
+            left += 1
+        else:
+            pick = blocks[right]
+            right -= 1
+
+        if pick > last:
+            possible = False
+            break
+
+        last = pick
+
+    print("Yes" if possible else "No")
