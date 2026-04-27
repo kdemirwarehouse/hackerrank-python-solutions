@@ -57,5 +57,18 @@ for _ in range(t):
 for i in range(1, int(input()) + 1):
     print(((10 ** i - 1) // 9) ** 2)
 
+# ---------------------------------------------------------
+# PROBLEM 4: Iterables and Iterators
+# ---------------------------------------------------------
+from itertools import combinations
 
+n = int(input())
+letters = input().split()
+k = int(input())
+
+all_combos = list(combinations(letters, k))
+
+contains_a = [c for c in all_combos if 'a' in c]
+
+print(round(len(contains_a) / len(all_combos), 4))
 
