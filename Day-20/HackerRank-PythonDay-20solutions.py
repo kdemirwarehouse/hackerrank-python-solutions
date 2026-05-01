@@ -66,9 +66,21 @@ n = int(input())
 letters = input().split()
 k = int(input())
 
-all_combos = list(combinations(letters, k))
+# ---------------------------------------------------------
+# PROBLEM 5: Maximize it!
+# ---------------------------------------------------------
+from itertools import product
 
-contains_a = [c for c in all_combos if 'a' in c]
+K, M = map(int, input().split())
 
-print(round(len(contains_a) / len(all_combos), 4))
-
+lists = []
+for _ in range(K):
+    row = list(map(int, input().split()))
+    lists.append(row[1:])
+    
+max_value = 0
+for combo in product(*lists):
+    total = sum(x**2 for x in combo) % M 
+    max_value = max(max_value, total)
+    
+print(max_value)
