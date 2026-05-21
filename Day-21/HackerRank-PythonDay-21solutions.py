@@ -92,3 +92,23 @@ if __name__ == '__main__':
     x = Complex(*c)
     y = Complex(*d)
     print(*map(str, [x+y, x-y, x*y, x/y, x.mod(), y.mod()]), sep='\n')
+
+
+# ---------------------------------------------------------
+# PROBLEM 3: Classes: Athlete Sort
+# ---------------------------------------------------------
+n, m = map(int, input().split())
+
+athletes = []
+
+for _ in range(n):
+    row = list(map(int, input().split()))
+    athletes.append(row)
+
+k = int(input())
+
+athletes.sort(key=lambda x: x[k])
+
+for athlete in athletes:
+    print(*athlete)
+
