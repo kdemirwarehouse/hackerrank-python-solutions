@@ -95,7 +95,7 @@ if __name__ == '__main__':
 
 
 # ---------------------------------------------------------
-# PROBLEM 3: Classes: Athlete Sort
+# PROBLEM 3: Athlete Sort
 # ---------------------------------------------------------
 n, m = map(int, input().split())
 
@@ -112,3 +112,30 @@ athletes.sort(key=lambda x: x[k])
 for athlete in athletes:
     print(*athlete)
 
+# ---------------------------------------------------------
+# PROBLEM 4: gnitroS
+# ---------------------------------------------------------
+s = input()
+
+lowercase = []
+uppercase = []
+odd_digits = []
+even_digits = []
+
+for char in s:
+    if char.islower():
+        lowercase.append(char)
+    elif char.isupper():
+        uppercase.append(char)
+    else:
+        if int(char) % 2 == 1:
+            odd_digits.append(char)
+        else:
+            even_digits.append(char)
+
+lowercase.sort()
+uppercase.sort()
+odd_digits.sort()
+even_digits.sort()
+
+print("".join(lowercase + uppercase + odd_digits + even_digits))
