@@ -139,3 +139,44 @@ odd_digits.sort()
 even_digits.sort()
 
 print("".join(lowercase + uppercase + odd_digits + even_digits))
+
+# ---------------------------------------------------------
+# PROBLEM 5: Validating Email Addresses With a Filter
+# ---------------------------------------------------------
+def fun(s):
+    try:
+        username, rest = s.split("@")
+        website, extension = rest.split(".")
+    except ValueError:
+        return False
+
+    if username == "" or website == "" or extension == "":
+        return False
+
+    if not username.replace("-","").replace("_","").isalnum():
+        return False
+
+    if not website.isalnum():
+        return False
+
+    if not extension.isalpha():
+        return False
+
+    if len(extension) > 3:
+        return False
+
+    return True
+
+def filter_mail(emails):
+    return list(filter(fun, emails))
+
+if __name__ == '__main__':
+    n = int(input())
+    emails = []
+    for _ in range(n):
+        emails.append(input())
+
+filtered_emails = filter_mail(emails)
+filtered_emails.sort()
+print(filtered_emails)
+
