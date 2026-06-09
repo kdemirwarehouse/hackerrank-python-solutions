@@ -63,3 +63,41 @@ P = input()
 
 print (bool(re.match(regex_integer_in_range, P)) 
 and len(re.findall(regex_alternating_repetitive_digit_pair, P)) < 2)
+
+# ---------------------------------------------------------
+# PROBLEM 5: Matrix Script
+# ---------------------------------------------------------
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+first_multiple_input = input().rstrip().split()
+
+n = int(first_multiple_input[0])
+
+m = int(first_multiple_input[1])
+
+matrix = []
+
+for _ in range(n):
+    matrix_item = input()
+    matrix.append(matrix_item)
+
+decoded = ""
+
+for col in range(m):
+    for row in range(n):
+        decoded += matrix[row][col]
+        
+cleaned = re.sub(
+    r"(?<=[A-Za-z0-9])[^A-Za-z0-9]+(?=[A-Za-z0-9])",
+    " ",
+    decoded
+)
+
+print(cleaned)
